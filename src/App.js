@@ -1,4 +1,3 @@
-import './App.css';
 import { GameContextProvider } from './context/GameContext';
 import AppRoutes from './routes/AppRoutes';
 

@@ -1,11 +1,9 @@
 import React from 'react';
-import { useEffect } from 'react';
 import GameContainer from '../components/GameContainer';
 import HeaderGame from '../components/HeaderGame';
 import ModalGame from '../components/modal/ModalGame';
 import ModalRestartGame from '../components/modal/ModalRestartGame';
 import Stats from '../components/Stats';
-import { useModal } from '../hooks/useModal';
 import { ContainerGame } from '../styled/ContainerMobile.styled';
 
 const GamePage = () => {

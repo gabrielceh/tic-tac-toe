@@ -10,8 +10,7 @@ import {
 } from '../../styled/modal/Modal.styled';
 
 const ModalRestartGame = () => {
-  const { typeGame, messageWin, isOpenRestart, closeModalRestart, restartGame, quitGame } =
-    useContext(GameContext);
+  const { isOpenRestart, closeModalRestart, restartGame } = useContext(GameContext);
 
   const handleNewRound = () => {
     restartGame();

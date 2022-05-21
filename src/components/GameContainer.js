@@ -2,7 +2,6 @@ import React, { useContext, useEffect, useState } from 'react';
 import GameContext from '../context/GameContext';
 import { Cell } from '../styled/Cell.styled';
 import { GameMainContainer } from '../styled/GameMainContainer.styled';
-import { Mark } from '../styled/Mark.styled';
 
 const GameContainer = () => {
   const { handleClickPlayer, gameState, winnerCells } = useContext(GameContext);

@@ -12,8 +12,7 @@ import {
 } from '../../styled/modal/Modal.styled';
 
 const ModalGame = () => {
-  const { typeGame, messageWin, isOpen, closeModal, restartGame, quitGame } =
-    useContext(GameContext);
+  const { messageWin, isOpen, closeModal, restartGame, quitGame } = useContext(GameContext);
 
   const handleNewRound = () => {
     restartGame();

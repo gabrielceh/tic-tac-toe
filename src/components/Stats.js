@@ -3,7 +3,7 @@ import GameContext from '../context/GameContext';
 import { StatBox, StatsContainer } from '../styled/StatsContainer.styled';
 
 const Stats = () => {
-  const { typeGame, cpuMark, player1Mark, winX, winO, ties } = useContext(GameContext);
+  const { typeGame, cpuMark, winX, winO, ties } = useContext(GameContext);
   const [messageX, setMessageX] = useState('');
   const [messageO, setMessageO] = useState('');
 

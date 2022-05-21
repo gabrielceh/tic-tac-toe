@@ -102,6 +102,9 @@ export const GameContextProvider = ({ children }) => {
           gameActive: false,
           typeGame: '',
           startGame: false,
+          cpuMark: 'O',
+          player1Mark: 'X',
+          player2Mark: 'O',
         };
     //console.log(initialStorage);
     setWinX(initialStorage.winX);
@@ -110,6 +113,9 @@ export const GameContextProvider = ({ children }) => {
     setGameActive(initialStorage.gameActive);
     setTypeGame(initialStorage.typeGame);
     setStartGame(initialStorage.startGame);
+    setCpuMark(initialStorage.cpuMark);
+    setPlayer1Mark(initialStorage.player1Mark);
+    setPlayer2Mark(initialStorage.player2Mark);
   }, []);
 
   useEffect(() => {
@@ -121,6 +127,9 @@ export const GameContextProvider = ({ children }) => {
         gameActive: true,
         typeGame,
         startGame,
+        cpuMark,
+        player1Mark,
+        player2Mark,
       };
       localStorage.setItem(ttt, JSON.stringify(localData));
     }
@@ -140,7 +149,7 @@ export const GameContextProvider = ({ children }) => {
   };
 
   const handleTypeGame = () => {
-    console.log(typeGame);
+    // console.log(typeGame);
     // if (e.target.dataset.type === 'vs-cpu') {
     if (typeGame === 'vs-cpu') {
       // setTypeGame('vs-cpu');
@@ -229,8 +238,6 @@ export const GameContextProvider = ({ children }) => {
       setTies(ties + 1);
       setMessageWin({ message: '', markWin: 'Tie', player: '' });
       openModal();
-      //gameDrawDisplay.innerHTML = draws;
-      //statusDisplay.innerHTML = drawMessage();
       setGameActive(false);
       return;
     }
@@ -262,7 +269,7 @@ export const GameContextProvider = ({ children }) => {
       let cpuW = cpuWin(cpuMark, gameState, winningConditions);
 
       if (cpuW.toWin) {
-        console.log(cpuW);
+        // console.log(cpuW);
         for (let cond of cpuW.condition) {
           if (gameState[cond] === '' || !gameActive) {
             conditionValidation(cond, handleCellPlayed, handleResultValidation);
@@ -272,7 +279,7 @@ export const GameContextProvider = ({ children }) => {
       }
 
       if (cpuBlock.toBlock) {
-        console.log(cpuBlock);
+        // console.log(cpuBlock);
         // const { condition } = cpuBlock.condition;
         for (let cond of cpuBlock.condition) {
           if (gameState[cond] === '' || !gameActive) {
@@ -332,6 +339,9 @@ export const GameContextProvider = ({ children }) => {
       gameActive: false,
       typeGame: '',
       startGame: false,
+      cpuMark: 'O',
+      player1Mark: 'X',
+      player2Mark: 'O',
     };
     localStorage.setItem(ttt, JSON.stringify(localData));
   };
