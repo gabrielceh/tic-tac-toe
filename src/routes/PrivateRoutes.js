@@ -5,7 +5,7 @@ import GameContext from '../context/GameContext';
 const PrivateRoutes = ({ children }) => {
   const { startGame, typeGame } = useContext(GameContext);
 
-  return startGame && typeGame ? children : <Navigate to="/home" />;
+  return startGame && typeGame ? children : <Navigate to="/" />;
   // return children;
 };
 

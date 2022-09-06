@@ -11,17 +11,17 @@ const AppRoutes = () => {
       <Route
         path="/"
         element={
-          <PrivateRoutes>
-            <GamePage />
-          </PrivateRoutes>
-        }
-      />
-      <Route
-        path="home"
-        element={
           <PublicRoutes>
             <HomePage />
           </PublicRoutes>
+        }
+      />
+      <Route
+        path="/game"
+        element={
+          <PrivateRoutes>
+            <GamePage />
+          </PrivateRoutes>
         }
       />
     </Routes>

@@ -18,7 +18,7 @@ const MenuBtnContainer = () => {
   const handleVsCPU = (e) => {
     setTypeGame('vs-cpu');
     handleTypeGame();
-    navigate('/', {
+    navigate('/game', {
       replace: true,
     });
   };
@@ -26,24 +26,20 @@ const MenuBtnContainer = () => {
   const handleVsPlayer = (e) => {
     setTypeGame('vs-player');
     handleTypeGame();
-    navigate('/', {
+    navigate('/game', {
       replace: true,
     });
   };
 
   return (
     <BtnMenuContainer>
-      <LinkGame to={'/'}>
-        <BtnMenu vs="CPU" data-type="vs-cpu" onClick={handleVsCPU}>
-          NEW GAME (VS CPU)
-        </BtnMenu>
-      </LinkGame>
+      <BtnMenu vs="CPU" data-type="vs-cpu" onClick={handleVsCPU}>
+        NEW GAME (VS CPU)
+      </BtnMenu>
 
-      <LinkGame to={'/'}>
-        <BtnMenu vs="Player" data-type="vs-player" onClick={handleVsPlayer}>
-          NEW GAME (VS PLAYER)
-        </BtnMenu>
-      </LinkGame>
+      <BtnMenu vs="Player" data-type="vs-player" onClick={handleVsPlayer}>
+        NEW GAME (VS PLAYER)
+      </BtnMenu>
     </BtnMenuContainer>
   );
 };
